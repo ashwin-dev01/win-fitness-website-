@@ -1,0 +1,1274 @@
+
+/* ==========================================
+   WIN FITNESS - MAIN STYLESHEET
+   Brand: Gold Yellow + Charcoal Black
+========================================== */
+
+/* 1. BRAND VARIABLES */
+
+:root {
+    --gold: #F5C518;
+    --black: #171717;
+    --white: #FFFFFF;
+    --grey: #AAAAAA;
+    --dark-grey: #222222;
+    --border: #383838;
+}
+
+/* 2. GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+/* 3. NAVIGATION BAR */
+
+.navbar {
+    background: #111111;
+    border-bottom: 1px solid #333333;
+    padding: 8px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    width: 240px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-links .nav-button {
+    background: var(--gold);
+    color: var(--black);
+    padding: 13px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.nav-links .nav-button:hover {
+    background: var(--white);
+    color: var(--black);
+}
+
+/* 4. HERO SECTION */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at 75% 50%,
+            rgba(245, 197, 24, 0.12),
+            transparent 48%
+        ),
+        linear-gradient(120deg, #171717, #101010);
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: 55px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 650px;
+    padding: 75px 0;
+}
+
+.hero-label {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 5vw, 68px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin: 15px 0 25px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: #CCCCCC;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 540px;
+    margin-bottom: 30px;
+}
+
+/* HERO BUTTON */
+
+.primary-button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+    background: var(--white);
+    transform: translateY(-3px);
+}
+
+/* 5. FOUNDER IMAGE */
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 480px;
+    height: 590px;
+
+    object-fit: cover;
+    object-position: center 25%;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(245, 197, 24, 0.08);
+}
+
+/* 6. GENERAL SECTION STYLING */
+
+section {
+    padding: 85px 0;
+}
+
+.section-label {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.2;
+    margin: 12px 0 18px;
+}
+
+.section-description {
+    color: var(--grey);
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+/* 7. ABOUT SECTION */
+
+.about-content {
+    max-width: 800px;
+}
+
+.about-content p {
+    color: var(--grey);
+    margin-top: 15px;
+    line-height: 1.9;
+}
+
+/* 8. COACHING SERVICES */
+
+.services {
+    background: #111111;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: var(--dark-grey);
+    border: 1px solid var(--border);
+    padding: 32px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 34px;
+}
+
+.service-card h3 {
+    color: var(--gold);
+    margin: 15px 0 10px;
+    font-size: 19px;
+}
+
+.service-card p {
+    color: var(--grey);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 9. WHY WIN FITNESS */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.benefit {
+    border-left: 3px solid var(--gold);
+    padding: 20px;
+    background: #202020;
+    border-radius: 0 8px 8px 0;
+}
+
+.benefit h3 {
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.benefit p {
+    color: var(--grey);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 10. CONTACT SECTION */
+
+.contact {
+    background: #111111;
+    text-align: center;
+}
+
+.contact .section-description {
+    margin: 0 auto 30px;
+}
+
+/* 11. FOOTER */
+
+footer {
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #333333;
+    color: var(--grey);
+    font-size: 13px;
+}
+
+footer p + p {
+    margin-top: 5px;
+}
+
+/* ==========================================
+   12. RESPONSIVE DESIGN - TABLETS
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .hero-layout {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 5vw, 52px);
+    }
+
+    .logo {
+        width: 190px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero-image img {
+        height: 500px;
+    }
+}
+
+/* ==========================================
+   13. RESPONSIVE DESIGN - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    /* Navigation */
+
+    .nav-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 190px;
+        height: 75px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-bottom: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-links .nav-button {
+        padding: 9px 15px;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .hero-content {
+        padding: 65px 0 20px;
+    }
+
+    .hero-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 9vw, 52px);
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        max-height: 560px;
+        object-fit: contain;
+    }
+
+    /* Other sections */
+
+    section {
+        padding: 60px 0;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   14. SMALL MOBILE SCREENS
+========================================== */
+
+@media (max-width: 400px) {
+
+    .nav-links {
+        gap: 9px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .primary-button {
+        padding: 13px 18px;
+        font-size: 12px;
+    }
+}
+
+/* ==========================================
+   ABOUT WIN FITNESS - FOUNDER SECTION
+========================================== */
+
+.about {
+    background: #171717;
+    padding: 100px 0;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 75px;
+}
+
+/* Founder photograph */
+
+.about-image {
+    position: relative;
+    max-width: 430px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(245, 197, 24, 0.08);
+}
+
+/* Founder information */
+
+.about-content {
+    max-width: 620px;
+}
+
+.about-content .section-title {
+    margin: 15px 0;
+}
+
+.about-content .section-title span {
+    color: var(--gold);
+}
+
+.founder-title {
+    color: var(--gold);
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+.about-content p {
+    color: #BBBBBB;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.founder-tagline {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    margin: 25px 0;
+}
+
+/* Mobile layout */
+
+@media (max-width: 768px) {
+
+    .about {
+        padding: 65px 0;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-image img {
+        height: 450px;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================
+   WIN FITNESS - PREMIUM COACHING PROGRAMMES
+========================================== */
+
+.services {
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(245, 197, 24, 0.07),
+            transparent 55%
+        ),
+        #111111;
+
+    padding: 100px 0;
+}
+
+.services .section-title {
+    max-width: 650px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.services .section-description {
+    max-width: 650px;
+    margin-bottom: 45px;
+}
+
+/* Programme cards */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+
+    background: #1B1B1B;
+    border: 1px solid #383838;
+    border-radius: 12px;
+
+    padding: 32px 27px;
+
+    min-height: 450px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35),
+        0 0 20px rgba(245, 197, 24, 0.06);
+}
+
+/* Programme icon */
+
+.service-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Programme number */
+
+.programme-number {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+/* Programme heading */
+
+.service-card h3 {
+    color: var(--white);
+    font-size: 21px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* Programme description */
+
+.service-card > p {
+    color: #AAAAAA;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* Programme features */
+
+.service-features {
+    list-style: none;
+    margin-bottom: 28px;
+}
+
+.service-features li {
+    color: #CCCCCC;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.service-features li::before {
+    content: "✓";
+    color: var(--gold);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Enquiry button */
+
+.service-button {
+    display: block;
+    margin-top: auto;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--gold);
+    border: 1px solid var(--gold);
+
+    padding: 13px 15px;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+}
+
+.service-button:hover {
+    background: var(--gold);
+    color: #111111;
+}
+
+/* Closing message */
+
+.service-note {
+    text-align: center;
+    color: #999999;
+    font-size: 13px;
+    margin-top: 40px;
+    line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .services {
+        padding: 65px 0;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        min-height: auto;
+        padding: 28px 24px;
+    }
+
+}
+
+/* ==========================================
+   WIN FITNESS - WHY CHOOSE US
+========================================== */
+
+.benefits {
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(245, 197, 24, 0.06),
+            transparent 55%
+        ),
+        #171717;
+
+    padding: 100px 0;
+}
+
+.benefits .section-title {
+    max-width: 750px;
+    margin: 15px 0;
+}
+
+.benefits .section-title span {
+    display: block;
+    color: var(--gold);
+}
+
+.benefits .section-description {
+    max-width: 650px;
+    margin-bottom: 45px;
+}
+
+/* Benefits grid */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+/* Individual benefit cards */
+
+.benefit {
+    background: #1D1D1D;
+    border: 1px solid #383838;
+    border-left: 3px solid var(--gold);
+
+    padding: 32px;
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.3),
+        0 0 18px rgba(245, 197, 24, 0.05);
+}
+
+/* Icons */
+
+.benefit-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Number and category */
+
+.benefit-number {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+    margin-bottom: 12px;
+}
+
+/* Headings */
+
+.benefit h3 {
+    color: var(--white);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* Descriptions */
+
+.benefit p {
+    color: #AAAAAA;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Closing message */
+
+.benefits-closing {
+    margin-top: 65px;
+    padding: 40px 25px;
+
+    text-align: center;
+
+    background: #202020;
+    border: 1px solid #383838;
+    border-radius: 10px;
+}
+
+.benefits-closing h3 {
+    color: var(--gold);
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.benefits-closing p {
+    color: #AAAAAA;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .benefits {
+        padding: 65px 0;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .benefit {
+        padding: 25px;
+    }
+
+    .benefits-closing {
+        margin-top: 40px;
+        padding: 30px 20px;
+    }
+
+    .benefits-closing h3 {
+        font-size: 18px;
+    }
+
+}
+
+/* ==========================================
+   WIN FITNESS - CONTACT SECTION
+========================================== */
+
+.contact {
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(245, 197, 24, 0.10),
+            transparent 65%
+        ),
+        #111111;
+
+    padding: 110px 0;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 850px;
+}
+
+.contact .section-title {
+    font-size: clamp(36px, 5vw, 52px);
+    margin: 20px 0;
+}
+
+.contact .section-title span {
+    color: var(--gold);
+}
+
+.contact-description {
+    color: #BBBBBB;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.contact-highlights {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 35px 0;
+    color: #EEEEEE;
+    font-size: 14px;
+}
+
+.contact-highlights div::first-letter {
+    color: var(--gold);
+}
+
+.contact-button {
+    padding: 17px 35px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.contact-note {
+    color: #888888;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 75px 0;
+    }
+
+    .contact-highlights {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .contact-description {
+        font-size: 14px;
+    }
+}
+
+/* ==========================================
+   WIN FITNESS - TRANSFORMATION SHOWCASE
+========================================== */
+
+.transformations {
+    background: #171717;
+    padding: 100px 0;
+}
+
+.transformations .section-title span {
+    color: var(--gold);
+}
+
+.transformations .section-description {
+    margin-top: 15px;
+    max-width: 650px;
+}
+
+.transformation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.transformation-card {
+    background: #202020;
+    border: 1px solid #383838;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.transformation-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+/* IMAGE PLACEHOLDER */
+
+.transformation-placeholder {
+    height: 280px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(245, 197, 24, 0.12),
+            transparent 65%
+        ),
+        #111111;
+
+    border-bottom: 1px solid #383838;
+}
+
+.placeholder-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.placeholder-content span {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.placeholder-content h3 {
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.placeholder-content p {
+    color: #888888;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* TRANSFORMATION DETAILS */
+
+.transformation-info {
+    padding: 25px;
+}
+
+.transformation-info span {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.transformation-info h3 {
+    color: #FFFFFF;
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.transformation-info p {
+    color: #AAAAAA;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* BOTTOM CTA */
+
+.transformation-cta {
+    text-align: center;
+    margin-top: 65px;
+    padding: 40px 20px;
+
+    background: #202020;
+    border: 1px solid #383838;
+    border-radius: 10px;
+}
+
+.transformation-cta h3 {
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.transformation-cta p {
+    color: #AAAAAA;
+    margin-bottom: 25px;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 900px) {
+
+    .transformation-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .transformations {
+        padding: 65px 0;
+    }
+
+    .transformation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transformation-placeholder {
+        height: 250px;
+    }
+
+    .transformation-cta h3 {
+        font-size: 21px;
+    }
+
+}
+
+/* ==========================================
+   WIN FITNESS - PREMIUM FOOTER
+========================================== */
+
+.main-footer {
+    background: #101010;
+    border-top: 1px solid #383838;
+    padding: 65px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.3fr 1fr;
+    gap: 40px;
+    padding-bottom: 45px;
+}
+
+.footer-brand img {
+    width: 190px;
+    height: 85px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.footer-brand p {
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 280px;
+    margin-top: 15px;
+}
+
+.footer-links h3 {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.footer-links a,
+.footer-links p {
+    display: block;
+    color: #AAAAAA;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333333;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-bottom p {
+    color: #888888;
+    font-size: 12px;
+}
+
+/* RESPONSIVE FOOTER */
+
+@media (max-width: 900px) {
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .main-footer {
+        padding: 50px 0 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+
+/* WIN FITNESS - SINGLE TRANSFORMATION IMAGE PER CARD */
+.transformation-image-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #111111;
+    border-bottom: 1px solid #383838;
+}
+
+.transformation-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: #111111;
+}
+
+@media (max-width: 600px) {
+    .transformation-image-wrap {
+        aspect-ratio: 1 / 1;
+    }
+}
